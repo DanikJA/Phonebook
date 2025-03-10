@@ -3,7 +3,7 @@ import {
   DeleteButton,
   ContactItem as StyledContactItem,
 } from './ContactStyled';
-import { deleteContact } from '../../redux/asyncFunctions.js';
+import { deleteContact } from '../../redux/contacts/asyncFunctions.js';
 import { useDispatch } from 'react-redux';
 
 export const ContactItem = ({ id, name, number }) => {

@@ -1,7 +1,7 @@
 import { Formik, Field, ErrorMessage } from 'formik';
 import Notiflix from 'notiflix';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/asyncFunctions';
+import { addContact } from '../../redux/contacts/asyncFunctions';
 import {
   StyledForm,
   Label,
@@ -9,7 +9,7 @@ import {
   SubmitButton,
   ErrorText,
 } from './ContactFormStyled.jsx';
-import { selectContacts } from '../../redux/selectors.js';
+import { selectContacts } from '../../redux/contacts/selectors.js';
 
 import * as Yup from 'yup';
 

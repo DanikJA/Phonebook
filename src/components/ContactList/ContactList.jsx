@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 import { ContactItem } from '../ContactItem/ContactItem';
 import { ClipLoader } from 'react-spinners';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchContacts } from '../../redux/asyncFunctions.js';
+import { fetchContacts } from '../../redux/contacts/asyncFunctions.js';
 import {
   selectFilter,
   selectContacts,
   isLoading,
-} from '../../redux/selectors.js';
+} from '../../redux/contacts/selectors.js';
 import {
   ContactListContainer,
   ContactListHeading,

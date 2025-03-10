@@ -1,7 +1,7 @@
 import { SearchLabel, SearchInput } from './FilterStyled';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from '../../redux/contactSlice.js';
-import { selectFilter } from '../../redux/selectors.js';
+import { setFilter } from '../../redux/contacts/slice.js';
+import { selectFilter } from '../../redux/contacts/selectors.js';
 
 export const Filter = () => {
   const filterValue = useSelector(selectFilter);
