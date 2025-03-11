@@ -1,46 +1,44 @@
-// import { Formik, Field, ErrorMessage } from 'formik';
-// import Notiflix from 'notiflix';
-// import { useDispatch, useSelector } from 'react-redux';
-// import {
-//   StyledForm,
-//   Label,
-//   Input,
-//   SubmitButton,
-//   ErrorText,
-// } from './ContactFormStyled.jsx';
+import { Formik, Field, ErrorMessage, Form } from 'formik';
+import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
+import { register } from '../../../redux/auth/asyncFunctions';
 
-// import * as Yup from 'yup';
+const RegisterSchema = Yup.object().shape({
+  email: Yup.string().email('Invalid email').required('Required'),
+  password: Yup.string().min(6, 'Too Short!').required('Required'),
+});
 
-// const numbersSchema = Yup.object().shape({
-//   name: Yup.string().min(2, 'Too Short!').required('Required'),
-//   number: Yup.string()
-//     .matches(/^\d+$/, 'Please enter a valid number!')
-//     .required('Required'),
-// });
+export const LoginPage = () => {
+  const dispatch = useDispatch();
 
-//  export export const ContactForm = () => {
-//   return (
-//     <Formik
-//       initialValues={{ Mail: '', Password: '' }}
-//       validationSchema={numbersSchema}
-//       onSubmit={(values, actions) => {
-//         addNumber(values);
-//         actions.resetForm();
-//       }}
-//     >
-//       <StyledForm>
-//         <Label>
-//           Email
-//           <Field name="Email" as={Input} />
-//           <ErrorMessage name="Email" component={ErrorText} />
-//         </Label>
-//         <Label>
-//           Password
-//           <Field name="Password" as={Input} />
-//           <ErrorMessage name="Password" component={ErrorText} />
-//         </Label>
-//         <SubmitButton type="submit">Submit</SubmitButton>
-//       </StyledForm>
-//     </Formik>
-//   );
-// };
+  return (
+    <Formik
+      initialValues={{ email: '', password: '' }}
+      validationSchema={RegisterSchema}
+      onSubmit={(values, actions) => {
+        dispatch(register(values));
+        actions.resetForm();
+      }}
+    >
+      <Form>
+        <label>
+          Email:
+          <Field name="email" type="email" />
+          <ErrorMessage name="email" component="div" style={{ color: 'red' }} />
+        </label>
+
+        <label>
+          Password:
+          <Field name="password" type="password" />
+          <ErrorMessage
+            name="password"
+            component="div"
+            style={{ color: 'red' }}
+          />
+        </label>
+
+        <button type="submit">Register</button>
+      </Form>
+    </Formik>
+  );
+};
