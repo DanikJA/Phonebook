@@ -7,14 +7,14 @@ import {
   selectFilter,
   selectContacts,
   isLoading,
-} from '../../redux/contacts/selectors.js';
+} from '../../redux/contacts/selectors';
 import {
   ContactListContainer,
   ContactListHeading,
   ContactList,
 } from './ContactListStyled.jsx';
 
-export const ContactListComponent = () => {
+export const PhoneBook = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   const filterValue = useSelector(selectFilter);
