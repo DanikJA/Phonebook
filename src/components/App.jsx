@@ -2,7 +2,7 @@ import { Routes, Route, Navigate, NavLink } from 'react-router-dom';
 // import { Suspense, lazy } from 'react';
 
 import { HomePage } from './Pages/HomePage/HomePage.js';
-// import RegisterPage from './Pages/RegisterPage/RegisterPage.js';
+import { RegisterPage } from './Pages/RegisterPage/RegisterPage.js';
 import { LoginPage } from './Pages/LoginPage/LoginPage.js';
 
 export const App = () => {
@@ -24,7 +24,7 @@ export const App = () => {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/register" element={<RegisterPage />} /> */}
+        <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
