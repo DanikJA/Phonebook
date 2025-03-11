@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const HomePage = () => {
+export const HomePage = () => {
   return (
     <div>
       <h1>Welcome to phone book</h1>
