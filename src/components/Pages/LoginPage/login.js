@@ -8,7 +8,6 @@ import {
   SubmitButton,
   ErrorText,
 } from './ContactFormStyled.jsx';
-import { selectContacts } from '../../redux/contacts/selectors.js';
 
 import * as Yup from 'yup';
 
