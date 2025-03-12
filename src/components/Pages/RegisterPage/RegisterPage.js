@@ -23,13 +23,13 @@ export const RegisterPage = () => {
       <Form>
         <label>
           Name:
-          <Field name="email" type="email" />
+          <Field name="name" type="text" />
           <ErrorMessage name="name" component="div" style={{ color: 'red' }} />
         </label>
 
         <label>
           Email:
-          <Field name="email" type="email" />
+          <Field name="email" type="text" />
           <ErrorMessage name="email" component="div" style={{ color: 'red' }} />
         </label>
 
@@ -43,7 +43,7 @@ export const RegisterPage = () => {
           />
         </label>
 
-        <button type="submit">Register</button>
+        <button type="submit">Submit</button>
       </Form>
     </Formik>
   );

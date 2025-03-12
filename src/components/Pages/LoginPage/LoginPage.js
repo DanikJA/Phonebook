@@ -37,7 +37,7 @@ export const LoginPage = () => {
           />
         </label>
 
-        <button type="submit">Register</button>
+        <button type="submit">Submit</button>
       </Form>
     </Formik>
   );
