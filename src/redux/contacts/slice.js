@@ -4,11 +4,9 @@ import { fetchContacts, addContact, deleteContact } from './asyncFunctions';
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: {
-    contacts: {
-      items: [],
-      isLoading: false,
-      error: null,
-    },
+    items: [],
+    isLoading: false,
+    error: null,
     filter: '',
   },
   reducers: {

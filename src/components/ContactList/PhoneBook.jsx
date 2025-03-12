@@ -26,8 +26,6 @@ export const PhoneBook = () => {
     }
   }, [dispatch, contacts.length]);
 
-  console.log(contacts);
-
   if (isLoadingContacts) {
     return (
       <div
