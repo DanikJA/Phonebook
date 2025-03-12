@@ -5,5 +5,10 @@ export const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useAuth();
 
-  return <div></div>;
+  return (
+    <div>
+      <p>Welcome,{user.name}</p>
+      <button type="button" onClick={() => dispatch()}></button>
+    </div>
+  );
 };
