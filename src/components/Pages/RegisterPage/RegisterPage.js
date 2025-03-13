@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { register } from '../../../redux/auth/asyncFunctions';
 
 const RegisterSchema = Yup.object().shape({
-  name: Yup.string().name('Invalid name').required('Required'),
+  name: Yup.string().required('Required'),
   email: Yup.string().email('Invalid email').required('Required'),
   password: Yup.string().min(6, 'Too Short!').required('Required'),
 });
