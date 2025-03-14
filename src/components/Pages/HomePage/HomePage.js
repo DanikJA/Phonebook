@@ -4,7 +4,7 @@ import {
   HomePageContainer,
   StyledNavLink,
   SubTitle,
-} from './HomeStyled.js';
+} from './HomeStyled';
 
 export const HomePage = () => {
   const { isLoggedIn } = useAuth();
