@@ -12,7 +12,7 @@ export const HomePageContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
   color: #333;
   text-align: center;
@@ -20,8 +20,8 @@ export const Title = styled.h1`
   margin: 2px;
 `;
 
-export const SubTitle = styled.h1`
-  font-size: 28px;
+export const SubTitle = styled.h2`
+  font-size: 40px;
   font-weight: bold;
   color: #333;
   text-align: center;
