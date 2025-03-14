@@ -1,7 +1,14 @@
-import { Formik, Field, ErrorMessage, Form } from 'formik';
+import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { register } from '../../../redux/auth/asyncFunctions';
+import {
+  StyledForm,
+  Label,
+  Input,
+  SubmitButton,
+  ErrorText,
+} from './RegisterStyled';
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string().required('Required'),
@@ -21,31 +28,39 @@ export const RegisterPage = () => {
         actions.resetForm();
       }}
     >
-      <Form>
-        <label>
+      <StyledForm>
+        <Label>
           Name:
-          <Field name="name" type="text" />
-          <ErrorMessage name="name" component="div" style={{ color: 'red' }} />
-        </label>
-
-        <label>
-          Email:
-          <Field name="email" type="text" />
-          <ErrorMessage name="email" component="div" style={{ color: 'red' }} />
-        </label>
-
-        <label>
-          Password:
-          <Field name="password" type="password" />
+          <Field name="name" type="text" as={Input} />
           <ErrorMessage
-            name="password"
-            component="div"
+            name="name"
+            component={ErrorText}
             style={{ color: 'red' }}
           />
-        </label>
+        </Label>
 
-        <button type="submit">Submit</button>
-      </Form>
+        <Label>
+          Email:
+          <Field name="email" type="text" as={Input} />
+          <ErrorMessage
+            name="email"
+            component={ErrorText}
+            style={{ color: 'red' }}
+          />
+        </Label>
+
+        <Label>
+          Password:
+          <Field name="password" type="password" as={Input} />
+          <ErrorMessage
+            name="password"
+            component={ErrorText}
+            style={{ color: 'red' }}
+          />
+        </Label>
+
+        <SubmitButton type="submit">Submit</SubmitButton>
+      </StyledForm>
     </Formik>
   );
 };
