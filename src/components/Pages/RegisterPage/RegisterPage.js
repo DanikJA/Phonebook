@@ -32,31 +32,19 @@ export const RegisterPage = () => {
         <Label>
           Name:
           <Field name="name" type="text" as={Input} />
-          <ErrorMessage
-            name="name"
-            component={ErrorText}
-            style={{ color: 'red' }}
-          />
+          <ErrorMessage name="name" component={ErrorText} />
         </Label>
 
         <Label>
           Email:
           <Field name="email" type="text" as={Input} />
-          <ErrorMessage
-            name="email"
-            component={ErrorText}
-            style={{ color: 'red' }}
-          />
+          <ErrorMessage name="email" component={ErrorText} />
         </Label>
 
         <Label>
           Password:
           <Field name="password" type="password" as={Input} />
-          <ErrorMessage
-            name="password"
-            component={ErrorText}
-            style={{ color: 'red' }}
-          />
+          <ErrorMessage name="password" component={ErrorText} />
         </Label>
 
         <SubmitButton type="submit">Submit</SubmitButton>
