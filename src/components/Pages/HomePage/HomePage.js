@@ -1,10 +1,10 @@
+import { useAuth } from '../../../redux/hooks/auth';
 import {
   Title,
   HomePageContainer,
   StyledNavLink,
   SubTitle,
-} from './HomeStyled';
-import { useAuth } from '../../../redux/hooks/auth';
+} from './HomeStyled.js';
 
 export const HomePage = () => {
   const { isLoggedIn } = useAuth();
