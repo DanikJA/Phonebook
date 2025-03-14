@@ -8,7 +8,7 @@ import {
   Input,
   SubmitButton,
   ErrorText,
-} from './LoginStyled';
+} from './LoginPageStyled';
 
 const RegisterSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
