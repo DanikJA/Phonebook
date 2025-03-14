@@ -8,7 +8,7 @@ import {
   Input,
   SubmitButton,
   ErrorText,
-} from '../RegisterPage/RegisterStyled';
+} from './RegisterStyled';
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string().required('Required'),

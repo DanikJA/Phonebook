@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 // import { Suspense, lazy } from 'react';
 import { HomePage } from './Pages/HomePage/HomePage.js';
-import { RegisterPage } from './Pages/RegisterPage/RegisterPage.js';
+import { RegisterPage } from './Pages/RegisterPage/RegisterPages.js';
 import { LoginPage } from './Pages/LoginPage/LoginPage.js';
 import { ContactsPage } from './Pages/ContactsPage/ContactsPage.js';
 // import { useAuth } from '../redux/hooks/auth.js';
