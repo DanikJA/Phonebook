@@ -1,12 +1,13 @@
-import { NavLink } from 'react-router-dom';
+import { Title, HomePageContainer, StyledNavLink } from './HomeStyled';
 
 export const HomePage = () => {
   return (
-    <div>
-      <h1>Welcome to phone book</h1>
-      <NavLink to="/login" title="Let's go">
+    <HomePageContainer>
+      <Title>Welcome to phone book</Title>
+      <StyledNavLink to="/login" title="Let's go">
         Let's go
-      </NavLink>
-    </div>
+      </StyledNavLink>
+      <div style={{ fontSize: '30px', marginTop: '20px' }}>🐣</div>
+    </HomePageContainer>
   );
 };

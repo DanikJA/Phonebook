@@ -26,14 +26,13 @@ export const StyledNavLink = styled(NavLink)`
     left: 50%;
     width: 0%;
     height: 2px;
-    background: #4a90e2;
+    background: greenyellow;
     transition: all 0.3s ease-in-out;
     transform: translateX(-50%);
   }
 
   &.active {
-    color: #4a90e2;
-    font-weight: bold;
+    color: white;
   }
 
   &:hover {
