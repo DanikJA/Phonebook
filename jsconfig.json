@@ -2,5 +2,5 @@
   "compilerOptions": {
     "baseUrl": "src"
   },
-  "include": ["src", "src/components/Pages/LoginPage/login.js"]
+  "include": ["src"]
 }
