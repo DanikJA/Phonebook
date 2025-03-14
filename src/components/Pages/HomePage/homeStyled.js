@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 export const HomePageContainer = styled.div`
   text-align: center;
   padding: 50px 20px;
-  background-color: #f4f4f4;
   min-height: 75vh;
   display: flex;
   flex-direction: column;
