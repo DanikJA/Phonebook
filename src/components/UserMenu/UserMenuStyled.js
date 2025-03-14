@@ -8,21 +8,22 @@ export const MenuContainer = styled.div`
 
 export const Email = styled.p`
   font-size: 16px;
-  font-weight: bold;
-  color: #61dafb;
+  font-weight: 600;
+  color: #4a90e2;
 `;
 
 export const LogoutButton = styled.button`
-  padding: 8px 12px;
+  padding: 10px 16px;
   font-size: 16px;
   color: white;
-  background-color: #ff4d4d;
+  background: #e74c3c;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-color: #e60000;
+    background: #c0392b;
+    transform: translateY(-2px);
   }
 `;
