@@ -26,7 +26,7 @@ export const SubTitle = styled.h2`
   color: #333;
   text-align: center;
   text-transform: none;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 `;
 
 export const StyledNavLink = styled(NavLink)`
