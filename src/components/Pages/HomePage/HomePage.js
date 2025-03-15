@@ -20,7 +20,7 @@ export const HomePage = () => {
           <div style={{ fontSize: '30px' }}>🐣</div>
         </>
       ) : (
-        <SubTitle>Happy to se you here!</SubTitle>
+        <SubTitle>Happy to see you here!</SubTitle>
       )}
     </HomePageContainer>
   );
