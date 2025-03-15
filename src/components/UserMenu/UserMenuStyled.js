@@ -25,6 +25,6 @@ export const LogoutButton = styled.button`
 
   &:hover {
     background: #4a4a4a;
-    transform: translateY(+1px);
+    transform: scale(1.05);
   }
 `;
