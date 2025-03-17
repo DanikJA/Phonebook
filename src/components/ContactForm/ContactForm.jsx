@@ -66,7 +66,7 @@ export const ContactForm = () => {
           <Field name="number" as={Input} />
           <ErrorMessage name="number" component={ErrorText} />
         </Label>
-        <SubmitButton type="submit">Submit</SubmitButton>
+        <SubmitButton type="submit">Add</SubmitButton>
       </StyledForm>
     </Formik>
   );

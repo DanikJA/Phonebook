@@ -12,7 +12,7 @@ export const HomePageContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 30px;
+  font-size: 38px;
   font-weight: bold;
   color: #333;
   text-align: center;
@@ -21,7 +21,7 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  font-size: 40px;
+  font-size: 38px;
   font-weight: bold;
   color: #333;
   text-align: center;
@@ -30,7 +30,7 @@ export const SubTitle = styled.h2`
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  font-size: 18px;
+  font-size: 20px;
   color: green;
   text-decoration: none;
   padding: 10px 15px;

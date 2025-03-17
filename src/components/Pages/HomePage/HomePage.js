@@ -17,7 +17,7 @@ export const HomePage = () => {
           <StyledNavLink to="/login" title="Let's go">
             Let's go
           </StyledNavLink>
-          <div style={{ fontSize: '30px' }}>🐣</div>
+          <div style={{ fontSize: '35px' }}>📞</div>
         </>
       ) : (
         <SubTitle>Happy to see you here!</SubTitle>
