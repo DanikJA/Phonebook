@@ -6,7 +6,7 @@ import { fetchContacts } from '../../redux/contacts/asyncFunctions';
 import {
   selectFilter,
   selectContacts,
-  isLoading,
+  selectIsLoading,
 } from '../../redux/contacts/selectors.js';
 import {
   ContactListContainer,
@@ -18,9 +18,8 @@ export const PhoneBook = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   console.log('Added contact', contacts);
-
   const filterValue = useSelector(selectFilter);
-  const isLoadingContacts = useSelector(isLoading);
+  const isLoadingContacts = useSelector(selectIsLoading);
 
   useEffect(() => {
     if (contacts.length === 0) {
