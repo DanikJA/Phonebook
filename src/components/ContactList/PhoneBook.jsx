@@ -17,6 +17,8 @@ import {
 export const PhoneBook = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
+  console.log('Added contact', contacts);
+
   const filterValue = useSelector(selectFilter);
   const isLoadingContacts = useSelector(isLoading);
 
