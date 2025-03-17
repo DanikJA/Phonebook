@@ -13,7 +13,7 @@ export const HomePage = () => {
     <HomePageContainer>
       {!isLoggedIn ? (
         <>
-          <Title>Welcome to phone book!</Title>
+          <Title>Welcome to the phone book!</Title>
           <StyledNavLink to="/login" title="Let's go">
             Let's go
           </StyledNavLink>
