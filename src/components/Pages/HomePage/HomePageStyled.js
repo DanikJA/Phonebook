@@ -31,13 +31,13 @@ export const SubTitle = styled.h2`
 
 export const StyledNavLink = styled(NavLink)`
   font-size: 20px;
-  color: green;
+  color: #006400;
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: rgba(1, 222, 95, 0.1);
+    color: #a2c93d;
   }
 `;
