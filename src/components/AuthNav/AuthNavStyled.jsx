@@ -10,7 +10,7 @@ export const AuthContainer = styled.div`
 export const AuthLink = styled(NavLink)`
   text-decoration: none;
   font-size: 18px;
-  color: #e0e0e0;
+  color: #d3d3d3;
   font-weight: 600;
   padding: 10px 16px;
   border-radius: 8px;
