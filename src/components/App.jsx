@@ -1,5 +1,4 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-// import { Suspense, lazy } from 'react';
 import { HomePage } from './Pages/HomePage/HomePage.js';
 import { RegisterPage } from './Pages/RegisterPage/RegisterPage.js';
 import { LoginPage } from './Pages/LoginPage/LoginPage.js';
@@ -41,7 +40,10 @@ export const App = () => {
           <Route
             path="/contacts"
             element={
-              <PrivateRoute component={<ContactsPage />} redirectTo="/" />
+              <PrivateRoute
+                component={<ContactsPage />}
+                redirectTo="/contacts"
+              />
             }
           />
           <Route path="*" element={<Navigate to="/" />} />
