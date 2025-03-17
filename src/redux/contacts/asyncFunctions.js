@@ -3,6 +3,7 @@ import axios from 'axios';
 
 export const fetchContacts = createAsyncThunk('contacts/fetchAll', async () => {
   const response = await axios.get('/contacts');
+  console.log('Fetched contacts:', response.data);
   return response.data;
 });
 

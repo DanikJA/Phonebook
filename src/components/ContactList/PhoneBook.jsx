@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 import { ContactItem } from '../ContactItem/ContactItem';
 import { ClipLoader } from 'react-spinners';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchContacts } from '../../redux/contacts/asyncFunctions.js';
+import { fetchContacts } from '../../redux/contacts/asyncFunctions';
 import {
   selectFilter,
   selectContacts,
   isLoading,
-} from '../../redux/contacts/selectors';
+} from '../../redux/contacts/selectors.js';
 import {
   ContactListContainer,
   ContactListHeading,
@@ -26,6 +26,8 @@ export const PhoneBook = () => {
     }
   }, [dispatch, contacts.length]);
 
+  console.log(contacts);
+
   if (isLoadingContacts) {
     return (
       <div
@@ -42,8 +44,9 @@ export const PhoneBook = () => {
   }
   const filteredContacts = contacts.filter(
     contact =>
-      contact.name.toLowerCase().includes(filterValue.toLowerCase()) ||
-      contact.number.includes(filterValue)
+      (contact.name &&
+        contact.name.toLowerCase().includes(filterValue.toLowerCase())) ||
+      (contact.number && contact.number.includes(filterValue))
   );
 
   return (

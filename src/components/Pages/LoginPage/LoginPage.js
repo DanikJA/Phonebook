@@ -1,7 +1,7 @@
 import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { register } from '../../../redux/auth/asyncFunctions';
+import { logIn } from '../../../redux/auth/asyncFunctions';
 import {
   StyledForm,
   Label,
@@ -10,7 +10,7 @@ import {
   ErrorText,
 } from './LoginPageStyled';
 
-const RegisterSchema = Yup.object().shape({
+const LoginSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
   password: Yup.string().min(6, 'Too Short!').required('Required'),
 });
@@ -21,9 +21,9 @@ export const LoginPage = () => {
   return (
     <Formik
       initialValues={{ email: '', password: '' }}
-      validationSchema={RegisterSchema}
+      validationSchema={LoginSchema}
       onSubmit={(values, actions) => {
-        dispatch(register(values));
+        dispatch(logIn(values));
         actions.resetForm();
       }}
     >
