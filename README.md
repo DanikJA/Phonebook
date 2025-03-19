@@ -1,4 +1,4 @@
-# React homework template
+
 
 Критерії прийому
 
