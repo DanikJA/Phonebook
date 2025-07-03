@@ -13,7 +13,7 @@ import {
 const RegisterSchema = Yup.object().shape({
   name: Yup.string().required('Required'),
   email: Yup.string().email('Invalid email').required('Required'),
-  password: Yup.string().min(6, 'Too Short!').required('Required'),
+  password: Yup.string().min(7, 'Too Short!').required('Required'),
 });
 
 export const RegisterPage = () => {
