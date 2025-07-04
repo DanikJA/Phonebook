@@ -52,17 +52,31 @@ export const PhoneBook = () => {
 
   return (
     <ContactListContainer>
-      <ContactListHeading>Contacts:</ContactListHeading>
-      <ContactList>
-        {filteredContacts.map(contact => (
-          <ContactItem
-            key={contact.id}
-            id={contact.id}
-            name={contact.name}
-            number={contact.number}
-          />
-        ))}
-      </ContactList>
+      {filteredContacts.length === 0 ? (
+        <p
+          style={{
+            padding: '20px',
+            textAlign: 'center',
+            fontSize: '30px',
+            marginTop: '120px',
+            fontWeight: '450',
+          }}
+        >
+          There are no contacts yet :(
+        </p>
+      ) : (
+        <ContactList>
+          <ContactListHeading>Contacts:</ContactListHeading>
+          {filteredContacts.map(contact => (
+            <ContactItem
+              key={contact.id}
+              id={contact.id}
+              name={contact.name}
+              number={contact.number}
+            />
+          ))}
+        </ContactList>
+      )}
     </ContactListContainer>
   );
 };
