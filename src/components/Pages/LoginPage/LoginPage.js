@@ -1,7 +1,8 @@
 import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { logIn } from '../../../redux/auth/asyncFunctions';
+import { selectAuthError } from '../../../redux/auth/selectors';
 import {
   StyledForm,
   Label,
@@ -17,6 +18,7 @@ const LoginSchema = Yup.object().shape({
 
 export const LoginPage = () => {
   const dispatch = useDispatch();
+  const error = useSelector(selectAuthError);
 
   return (
     <Formik
@@ -49,6 +51,7 @@ export const LoginPage = () => {
         </Label>
 
         <SubmitButton type="submit">Submit</SubmitButton>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
       </StyledForm>
     </Formik>
   );
